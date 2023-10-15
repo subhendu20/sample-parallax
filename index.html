@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://code.jquery.com/jquery-3.7.0.js"
+                    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+          <title>Parallax</title>
+</head>
+<style>
+          * {
+                    padding: 0px;
+                    margin: 0px;
+                    box-sizing: border-box;
+          }
+
+          html {
+                    font-size: 62.5%;
+          }
+
+          .window {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+          }
+
+          .main {
+                    width: 100%;
+                    height: calc(var(--vh, 1vh) * 200);
+                    background-image: url('./5471985.jpg');
+                    background-attachment: fixed;
+                    background-size: cover;
+                    position: relative;
+                    overflow: hidden;
+
+          }
+
+          .scrollpart {
+                    width: 100%;
+                    height: calc(var(--vh, 1vh) * 100);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    position: relative;
+          }
+
+          .scrollpart .heading {
+                    text-align: center;
+                    font-size: 5rem;
+                    font-weight: 700;
+                    color: black;
+
+          }
+
+          .scrollpart .text {
+                    width: 60%;
+                    margin: 0rem auto;
+                    text-align: justify;
+                    color: rgb(63, 59, 59);
+                    font-weight: 200;
+                    font-size: 2rem;
+                    padding: 2rem;
+                    line-height: 4rem;
+          }
+
+          img.float1 {
+                    position: absolute;
+                    width: 20rem;
+                    height: 20rem;
+
+
+          }
+
+          img.float2 {
+                    position: absolute;
+                    width: 25rem;
+                    height: 25rem;
+
+          }
+
+          img.float3 {
+                    position: absolute;
+                    width: 35rem;
+                    height: 35rem;
+
+          }
+
+          img.float4 {
+                    position: absolute;
+                    width: 65rem;
+                    height: 65rem;
+
+          }
+
+          img.float5 {
+                    position: absolute;
+                    width: 15rem;
+                    height: 15rem;
+
+          }
+
+          #one {
+                    top: 12%;
+                    left: 15%;
+
+          }
+
+
+
+          #two {
+                    top: 60%;
+                    left: 80%;
+
+          }
+
+          #three {
+                    top: 30%;
+                    left: 75%;
+
+          }
+
+          #four {
+                    top: 40%;
+                    left: 5%;
+
+          }
+
+          #five {
+                    top: 15%;
+                    left: 50%;
+
+          }
+
+          #six {
+                    top: 65%;
+                    left: 15%;
+
+
+          }
+
+          #seven {
+                    top: 25%;
+                    left: 30%;
+                    z-index: 2;
+
+          }
+
+          #text {
+                    position: absolute;
+                    top: 35%;
+                    left: 30%;
+                    width: 80rem;
+                    height: 15rem;
+                    z-index: 1;
+                    display: none;
+          }
+
+          .Warning {
+                    width: 100%;
+                    height: calc(var(--vh, 1vh) * 30);
+                    padding: 1rem;
+                    font-size: 2rem;
+                    display: none;
+                    text-align: center;
+                    position: relative;
+                    margin: auto;
+          }
+
+          @media screen and (max-width : 600px) {
+                    html{
+                              font-size: 40%;
+                    }
+                    .main {
+                              display: none;
+                    }
+
+                    .Warning {
+                              display: flex;
+                    }
+                    .scrollpart .text{
+                              width: 90%;
+                             
+                    }
+
+          }
+</style>
+
+<body>
+          <div class="window">
+                    <section class="main">
+                              <img src="./pngwing.com (19).png" alt="loading" class="float1" id="one">
+                              <img src="./pngwing.com (20).png" alt="loading" class="float1" id="two">
+                              <img src="./pngwing.com (21).png" alt="loading" class="float1" id="three">
+                              <img src="./pngwing.com (25).png" alt="loading" class="float5" id="four">
+                              <img src="./pngwing.com (23).png" alt="loading" class="float2" id="five">
+                              <img src="./pngwing.com (24).png" alt="loading" class="float2" id="six">
+                              <img src="./pngwing.com (22).png" alt="loading" class="float4" id="seven">
+                              <img src="./Home - Google Chrome 09-08-2023 10_55_08 (1).png" alt="loading" id="text">
+
+
+                    </section>
+                    <section class="Warning">
+                              <p>Please open in your computer to experience the parallax effect!</p>
+
+                    </section>
+                    <article class="scrollpart">
+                              <div class="heading">
+                                        Parallax Effect
+
+                              </div>
+                              <div class="text">
+                                        The Parallax Effect is a visual phenomenon that occurs when an observer's
+                                        perspective changes, causing objects in the foreground to appear to move
+                                        differently than objects in the background. This effect is often used in various
+                                        forms of media, such as photography, filmmaking, and web design, to create a
+                                        sense of depth and dimension.
+
+                                        In the context of web design, the parallax effect is commonly implemented using
+                                        CSS (Cascading Style Sheets) and JavaScript to create a visually engaging and
+                                        dynamic scrolling experience. When a user scrolls down a web page with a
+                                        parallax effect, different elements on the page move at different speeds,
+                                        creating a sense of depth and immersion. This can be achieved by adjusting the
+                                        position and opacity of elements based on the user's scroll position.
+
+                                        There are different levels of parallax effects, ranging from subtle to more
+                                        pronounced. Some websites use parallax scrolling to tell a story, showcase
+                                        products, or enhance the overall user experience. It's important to use parallax
+                                        effects thoughtfully and sparingly, as excessive use can lead to performance
+                                        issues and distract from the content.
+
+                                        The term "parallax" itself refers to the apparent displacement or difference in
+                                        the position of an object when viewed from two different points. In the context
+                                        of the parallax effect, these points are the different positions of the user's
+                                        viewpoint as they scroll through a webpage or interact with a visual scene.
+
+                              </div>
+
+                    </article>
+          </div>
+
+          <script>
+                    $(document).ready(function () {
+
+                              $(window).scroll(function () {
+                                        
+                                        var i = $(window).scrollTop()
+
+                                        $('#one').css({ 'left': (15 - (i / 100)) + '%', 'top': (12 + (i / 50)) + '%' })
+                                        $('#two').css({ 'left': (80 + (i / 100)) + '%', 'top': (60 - (i / 500)) + '%' })
+                                        $('#three').css({ 'left': (75 - (i / 50)) + '%', 'top': (30 + (i / 100)) + '%' })
+                                        $('#five').css({ 'left': (50 - (i / 50)) + '%', 'top': (15 + (i / 100)) + '%' })
+                                        $('#four').css({ 'left': (5 + (i / 100)) + '%', 'top': (40 + (i / 40)) + '%' })
+                                        $('#six').css({ 'left': (15 + (i / 30)) + '%', 'top': (65 + (i / 120)) + '%' })
+                                        $('#seven').css({ 'top': (25 + (i / 50)) + '%' })
+                                        $('#text').css({ 'top': (35 - (i / 100)) + '%' })
+                              })
+
+
+
+
+
+
+
+
+
+                    })
+                    let vh = window.innerHeight * 0.01;
+
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+
+          </script>
+</body>
+
+</html>
